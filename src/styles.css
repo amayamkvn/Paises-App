@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+
+table{
+    background: rgb(255, 255, 255);
+}
+
+/* table:hover{
+    background: rgb(224, 224, 224);
+} */
+
+.small-flag {
+    width: 50px;
+}

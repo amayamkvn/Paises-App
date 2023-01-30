@@ -1,0 +1,44 @@
+
+<div *ngIf="!pais; else divPais" class="alert alert-info">
+    Espere por favor...
+</div>
+
+<ng-template #divPais>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="animate__animated animate__fadeInDown">
+                <h2>País: <small>{{pais.altSpellings[2]}}</small></h2>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <h3>Bandera</h3>
+            <img [src]="pais.flags.png" class="img-thumbnail"/>
+        </div>
+        <div class="col-4">
+            <h3>Información</h3>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Población: </strong> {{pais.population}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código numérico: </strong> {{pais.callingCodes[0]}}
+                </li>
+                <li class="list-group-item">
+                    <strong>Código alpha: </strong> {{pais.cioc}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-4">
+            <h3>Lenguajes</h3>
+            <span class="badge bg-primary mr-1">{{pais.languages[0].name}}</span>
+
+        </div>
+    </div>
+    
+</ng-template>
+
